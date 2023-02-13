@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "147130314238",
+    "project_id": "healthiq-a08c4",
+    "storage_bucket": "healthiq-a08c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147130314238:android:29fe6bb652079b0ab9a4af",
+        "android_client_info": {
+          "package_name": "com.example.healthiq"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "147130314238-a4hb4reto1galt69jni83mmjiklnfg7c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnFGGT_BEHpA8fIersh07w6NhJj-OapMU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "147130314238-a4hb4reto1galt69jni83mmjiklnfg7c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
