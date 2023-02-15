@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:healthiq/const.dart';
 
 class AuthModel extends ChangeNotifier {
   bool _isLogin = false;

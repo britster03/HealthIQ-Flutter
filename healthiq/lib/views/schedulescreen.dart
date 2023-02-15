@@ -1,3 +1,4 @@
+import 'package:google_fonts/google_fonts.dart';
 import 'package:healthiq/const.dart';
 import 'package:healthiq/models/schedule_model.dart';
 import 'package:healthiq/widgets/schedule_item.dart';
@@ -20,16 +21,20 @@ class ScheduleScreen extends StatelessWidget {
             DateFormat('d/MM/y').format(element.time) !=
             DateFormat('d/MM/y').format(DateTime.now()))
         .toList();
+
     return SafeArea(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.all(20),
             child: Text(
               'Schedule',
-              style: roboto.copyWith(
-                  fontSize: 28, color: black, fontWeight: FontWeight.bold),
+              textAlign: TextAlign.center,
+              style: GoogleFonts.poppins(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
           const SizedBox(height: 20),
@@ -47,13 +52,13 @@ class ScheduleScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(5)),
                         child: Material(
                           child: TabBar(
-                              indicatorColor: purple,
+                              indicatorColor: Colors.blue,
                               unselectedLabelColor: black.withOpacity(.5),
                               labelStyle: roboto.copyWith(
                                   fontSize: 14, letterSpacing: 1),
                               labelColor: white,
                               indicator: BoxDecoration(
-                                  color: purple,
+                                  color: Colors.blue,
                                   borderRadius: BorderRadius.circular(10)),
                               tabs: [
                                 ...List.generate(
@@ -76,11 +81,9 @@ class ScheduleScreen extends StatelessWidget {
                             children: [
                               Text(
                                 'Nearest visit',
-                                style: roboto.copyWith(
-                                    color: black,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                    letterSpacing: 1),
+                                style: GoogleFonts.poppins(
+                                  fontSize: 19,
+                                ),
                               ),
                               const SizedBox(height: 20),
                               ...List.generate(
@@ -92,14 +95,12 @@ class ScheduleScreen extends StatelessWidget {
                                           schedule: nearest[index],
                                         ),
                                       )),
-                              const SizedBox(height: 10),
+                              const SizedBox(height: 1),
                               Text(
                                 'Future visit',
-                                style: roboto.copyWith(
-                                    color: black,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                    letterSpacing: 1),
+                                style: GoogleFonts.poppins(
+                                  fontSize: 16,
+                                ),
                               ),
                               const SizedBox(height: 20),
                               ...List.generate(
@@ -117,13 +118,17 @@ class ScheduleScreen extends StatelessWidget {
                         Center(
                           child: Text(
                             'Completed',
-                            style: roboto.copyWith(fontSize: 24, color: purple),
+                            style: GoogleFonts.poppins(
+                              fontSize: 20,
+                            ),
                           ),
                         ),
                         Center(
                           child: Text(
                             'Canceled',
-                            style: roboto.copyWith(fontSize: 24, color: purple),
+                            style: GoogleFonts.poppins(
+                              fontSize: 20,
+                            ),
                           ),
                         ),
                       ]),

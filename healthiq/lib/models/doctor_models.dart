@@ -1,4 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:healthiq/const.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 class DoctorModel {
   final String name;
   final String position;
@@ -16,22 +19,22 @@ class DoctorModel {
 
 final List<DoctorModel> nearbyDoctors = [
   DoctorModel(
-    name: "Luke Holland",
+    name: "Raghav Dixit",
     position: "General Practitioner",
     averageReview: 0,
     totalReviews: 0,
     profile: "assets/doctor_1.jpg",
   ),
   DoctorModel(
-    name: "Sophie Harmon",
-    position: "General Practitioner",
+    name: "Ajay Mehra",
+    position: "Pediatrician",
     averageReview: 0,
     totalReviews: 0,
     profile: "assets/doctor_2.jpg",
   ),
   DoctorModel(
-    name: "Louise Reid",
-    position: "General Practitioner",
+    name: "Lily Dsouza",
+    position: "Neurologist",
     averageReview: 2,
     totalReviews: 0,
     profile: "assets/doctor_3.jpg",

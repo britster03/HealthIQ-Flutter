@@ -1,5 +1,6 @@
 import 'package:healthiq/models/review_model.dart';
 import 'package:equatable/equatable.dart';
+import 'package:healthiq/const.dart';
 
 class Doctor extends Equatable {
   final int doctorId;
@@ -38,19 +39,19 @@ class Doctor extends Equatable {
 List<Map<String, dynamic>> dataDoctors = [
   {
     "id": 1,
-    "fullname": "Laryssa Davidovici",
+    "fullname": "Renuka Vyas",
     "specialist": "Ophthalmologists",
     "about":
         "Mauris sit amet eros. Suspendisse accumsan tortor quis turpis. Sed ante. Vivamus tortor. Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis.",
     "address": "5 School Court",
     "price": 59,
-    "image": "https://robohash.org/atmaioreseum.png?size=100x100&set=set1",
+    "image": "https://unsplash.com/search/photos/doctor",
     "color": 0xFF9a74f0,
     "reviews": [reviews[0], reviews[1], reviews[2], reviews[3]]
   },
   {
     "id": 2,
-    "fullname": "Ciel Lilloe",
+    "fullname": "JJ Thakkar",
     "specialist": "Pediatrician",
     "about":
         "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet.",
@@ -63,7 +64,7 @@ List<Map<String, dynamic>> dataDoctors = [
   },
   {
     "id": 3,
-    "fullname": "Liuka Leehane",
+    "fullname": "Arvind Telgi",
     "specialist": "Endocrinologist",
     "about":
         "Ut tellus. Nulla ut erat id mauris vulputate elementum. Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
@@ -76,7 +77,7 @@ List<Map<String, dynamic>> dataDoctors = [
   },
   {
     "id": 4,
-    "fullname": "Ashbey Bloxsom",
+    "fullname": "Jay Shah",
     "specialist": "Neurologists",
     "about":
         "Duis at velit eu est congue elementum. In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.",
@@ -88,7 +89,7 @@ List<Map<String, dynamic>> dataDoctors = [
   },
   {
     "id": 5,
-    "fullname": "Camile Keyser",
+    "fullname": "Harsh Ahuja",
     "specialist": "Endocrinologist",
     "about":
         "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
@@ -100,7 +101,7 @@ List<Map<String, dynamic>> dataDoctors = [
   },
   {
     "id": 6,
-    "fullname": "Vally Barrass",
+    "fullname": "Abhishek Rasal",
     "specialist": "Neurologists",
     "about":
         "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque. Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus. In sagittis dui vel nisl. Duis ac nibh.",
@@ -112,7 +113,7 @@ List<Map<String, dynamic>> dataDoctors = [
   },
   {
     "id": 7,
-    "fullname": "Andrea Addis",
+    "fullname": "Aarya Tupe",
     "specialist": "Endocrinologist",
     "about":
         "Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat.",
@@ -125,7 +126,7 @@ List<Map<String, dynamic>> dataDoctors = [
   },
   {
     "id": 8,
-    "fullname": "Riobard Visco",
+    "fullname": "Yash Bansal",
     "specialist": "Cardiologists",
     "about":
         "Vivamus vestibulum sagittis sapien. Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
@@ -137,7 +138,7 @@ List<Map<String, dynamic>> dataDoctors = [
   },
   {
     "id": 9,
-    "fullname": "Mirilla Burnsall",
+    "fullname": "Ananya Shankar",
     "specialist": "Pediatrician",
     "about":
         "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam nulla.",

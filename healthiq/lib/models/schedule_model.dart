@@ -1,4 +1,5 @@
 import 'package:healthiq/models/doctor_model.dart';
+import 'package:healthiq/const.dart';
 
 class Schedule {
   final Doctor doctor;

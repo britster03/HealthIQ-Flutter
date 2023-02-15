@@ -1,3 +1,5 @@
+import 'package:healthiq/const.dart';
+
 class Review {
   final int id;
   final String fullname, image, comment;

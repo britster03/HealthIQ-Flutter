@@ -1,6 +1,7 @@
 import 'package:healthiq/models/doctor_models.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:healthiq/const.dart';
 
 class NearbyDoctors extends StatelessWidget {
   const NearbyDoctors({Key? key}) : super(key: key);
@@ -50,7 +51,7 @@ class NearbyDoctors extends StatelessWidget {
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                       ),
-                      const Text("195 Reviews")
+                      const Text("Available Mon-Wed, 10:00-14:00")
                     ],
                   )
                 ],

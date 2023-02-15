@@ -1,6 +1,8 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:healthiq/constants/routes.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -9,24 +11,30 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.transparent,
+        title: Text(
+          "healthIQ",
+          style: GoogleFonts.poppins(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        backgroundColor: Colors.white,
         foregroundColor: Colors.black,
-        title: const Text("PROFILE"),
         centerTitle: true,
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.settings_rounded),
-          )
-        ],
+        leading: IconButton(
+          icon: Icon(Icons.menu),
+          onPressed: () async {
+            Navigator.of(context)
+                .pushNamedAndRemoveUntil(homescreenroute, (route) => false);
+          },
+        ),
       ),
       body: ListView(
         padding: const EdgeInsets.all(10),
         children: [
           // COLUMN THAT WILL CONTAIN THE PROFILE
           Column(
-            children: const [
+            children: [
               CircleAvatar(
                 radius: 50,
                 backgroundImage: NetworkImage(
@@ -34,25 +42,32 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 10),
-              Text(
-                "Rachael Wagner",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 15),
+                child: Text(
+                  "Lily Dsouza",
+                  style: GoogleFonts.poppins(
+                    fontSize: 20,
+                  ),
                 ),
               ),
-              Text("Junior Product Designer")
+              Text(
+                "Junior Product Designer",
+                style: GoogleFonts.poppins(
+                  fontSize: 14,
+                ),
+              )
             ],
           ),
           const SizedBox(height: 25),
           Row(
-            children: const [
+            children: [
               Padding(
                 padding: EdgeInsets.only(right: 5),
                 child: Text(
-                  "Complete your profile",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
+                  "Stages of therapy completed",
+                  style: GoogleFonts.poppins(
+                    fontSize: 13,
                   ),
                 ),
               ),
@@ -70,7 +85,7 @@ class ProfileScreen extends StatelessWidget {
               return Expanded(
                 child: Container(
                   height: 7,
-                  margin: EdgeInsets.only(right: index == 4 ? 0 : 6),
+                  margin: EdgeInsets.only(right: index == 4 ? 3 : 6),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: index == 0 ? Colors.blue : Colors.black12,
@@ -163,17 +178,17 @@ class ProfileCompletionCard {
 
 List<ProfileCompletionCard> profileCompletionCards = [
   ProfileCompletionCard(
-    title: "Set Your Profile Details",
+    title: "Check health reports",
     icon: CupertinoIcons.person_circle,
     buttonText: "Continue",
   ),
   ProfileCompletionCard(
-    title: "Upload your resume",
+    title: "Upload your prescription",
     icon: CupertinoIcons.doc,
     buttonText: "Upload",
   ),
   ProfileCompletionCard(
-    title: "Add your skills",
+    title: "Medical History",
     icon: CupertinoIcons.square_list,
     buttonText: "Add",
   ),
@@ -185,24 +200,37 @@ class CustomListTile {
   CustomListTile({
     required this.icon,
     required this.title,
+    required TextStyle style,
   });
 }
 
 List<CustomListTile> customListTiles = [
   CustomListTile(
     icon: Icons.insights,
-    title: "Activity",
+    title: "Medical Reports",
+    style: GoogleFonts.poppins(
+      fontSize: 20,
+    ),
   ),
   CustomListTile(
     icon: Icons.location_on_outlined,
-    title: "Location",
+    title: "Nearby Hospitals",
+    style: GoogleFonts.poppins(
+      fontSize: 20,
+    ),
   ),
   CustomListTile(
     title: "Notifications",
     icon: CupertinoIcons.bell,
+    style: GoogleFonts.poppins(
+      fontSize: 20,
+    ),
   ),
   CustomListTile(
     title: "Logout",
+    style: GoogleFonts.poppins(
+      fontSize: 20,
+    ),
     icon: CupertinoIcons.arrow_right_arrow_left,
   ),
 ];

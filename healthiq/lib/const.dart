@@ -9,4 +9,4 @@ const grey = Color(0xFFA2A8B4);
 const transparent = Color(0x00000000);
 const black = Color(0xFF2F2F32);
 //font
-final roboto = GoogleFonts.robotoCondensed();
+final roboto = GoogleFonts.poppins();

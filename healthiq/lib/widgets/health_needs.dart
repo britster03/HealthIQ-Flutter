@@ -1,5 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:healthiq/constants/routes.dart';
+import 'package:healthiq/const.dart';
 
 class HealthNeeds extends StatelessWidget {
   const HealthNeeds({Key? key}) : super(key: key);
@@ -7,10 +9,19 @@ class HealthNeeds extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<CustomIcon> customIcons = [
-      CustomIcon(name: "Appointment", icon: 'assets/appointment.png'),
-      CustomIcon(name: "Hospital", icon: 'assets/hospital.png'),
-      CustomIcon(name: "Covid-19", icon: 'assets/virus.png'),
-      CustomIcon(name: "More", icon: 'assets/more.png'),
+      CustomIcon(
+          name: "Appointment",
+          icon: 'assets/appointment.png',
+          onPressed: () {}),
+      CustomIcon(
+          name: "Hospital",
+          icon: 'assets/hospital.png',
+          onPressed: () {
+            Navigator.of(context)
+                .pushNamedAndRemoveUntil(myformroute, (route) => false);
+          }),
+      CustomIcon(name: "Covid-19", icon: 'assets/virus.png', onPressed: () {}),
+      CustomIcon(name: "More", icon: 'assets/more.png', onPressed: () {}),
     ];
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -47,5 +58,6 @@ class CustomIcon {
   CustomIcon({
     required this.name,
     required this.icon,
+    required Null Function() onPressed,
   });
 }

@@ -133,7 +133,8 @@ class ScheduleItem extends StatelessWidget {
                 height: 50,
                 width: (MediaQuery.of(context).size.width / 2) - 40,
                 decoration: BoxDecoration(
-                    color: purple, borderRadius: BorderRadius.circular(12)),
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(12)),
                 child: Center(
                   child: Text(
                     'Reschedule',

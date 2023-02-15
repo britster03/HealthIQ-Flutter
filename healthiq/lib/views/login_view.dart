@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'dart:developer' as devtools show log;
 import 'package:healthiq/constants/routes.dart';
 import 'package:healthiq/services/auth/auth_exceptions.dart';
@@ -39,7 +40,12 @@ class _LoginViewState extends State<LoginView> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("HealthIQ"),
+        title: Text(
+          "HealthIQ",
+          style: GoogleFonts.poppins(
+            fontSize: 20,
+          ),
+        ),
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
         centerTitle: true,
@@ -131,7 +137,7 @@ class _LoginViewState extends State<LoginView> {
                     final user = AuthService.firebase().currentUser;
                     if (user?.isEmailVerified ?? false) {
                       Navigator.of(context).pushNamedAndRemoveUntil(
-                          myformroute, (route) => false);
+                          piechartroute, (route) => false);
                     } else {
                       Navigator.of(context).pushNamedAndRemoveUntil(
                           verifyEmailRoute, (route) => false);

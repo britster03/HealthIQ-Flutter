@@ -1,5 +1,6 @@
 //import 'dart:js';
 //import 'package:js/js.dart';
+import 'package:charts_flutter/flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:healthiq/const.dart';
 
@@ -12,20 +13,24 @@ import 'package:healthiq/views/schedulescreen.dart';
 import 'package:healthiq/views/profilescreen.dart';
 import 'package:healthiq/views/login_view.dart';
 import 'package:healthiq/views/register_view.dart';
+import 'package:healthiq/views/suggestions_page.dart';
 import 'package:healthiq/views/verify_email_view.dart';
 import 'dart:developer' as devtools show log;
+
+import 'package:healthiq/views/pie_char.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(
     MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
             primarySwatch: Colors.blue,
             elevatedButtonTheme: ElevatedButtonThemeData(
               style: ElevatedButton.styleFrom(
                 // ignore: deprecated_member_use
-                primary: Colors.purple,
+                primary: Colors.blue,
                 minimumSize: const Size(double.infinity, 56),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(12)),
@@ -41,6 +46,8 @@ void main() {
           schedulescreenroute: (context) => ScheduleScreen(),
           profilescreenroute: (context) => ProfileScreen(),
           myformroute: (context) => MyForm(),
+          piechartroute: (context) => Home(),
+          suggestionroute: (context) => Suggestion(),
         }),
   );
 }
